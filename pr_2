@@ -1,0 +1,24 @@
+import java.util.*;
+public class Practical2 {
+
+    static int countOccurrences(String str, String word) {
+        // split the string by spaces in a
+        String a[] = str.split(" ");
+        int count = 0;
+        for (int i = 0; i < a.length; i++) {
+            // if match found increase count
+            if (word.equals(a[i]))
+                count++;
+        }
+
+        return count;
+    }
+
+    // Driver code
+    public static void main(String args[]) {
+        String str = "OB.background A remove background";
+        String word = "remove";
+        System.out.println(countOccurrences(str, word));
+    }
+}
+
